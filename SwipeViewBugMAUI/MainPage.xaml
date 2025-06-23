@@ -26,9 +26,63 @@
                             </SwipeItemView>
                         </SwipeItems>
                     </SwipeView.LeftItems>
+                    <SwipeView.RightItems>
+                        <SwipeItems Mode="Reveal" SwipeBehaviorOnInvoked="RemainOpen">
+                            <SwipeItemView>
+                                <Button Text="+"
+                                        WidthRequest="40"
+                                        BackgroundColor="LightGreen"
+                                        Command="{Binding Source={x:Reference ThisPage}, Path=IncrementCommand}"
+                                        CommandParameter="{Binding .}" />
+                            </SwipeItemView>
+                            <SwipeItemView>
+                                <Button Text="-" 
+                                        WidthRequest="40"
+                                        BackgroundColor="LightCoral"
+                                        Command="{Binding Source={x:Reference ThisPage}, Path=DecrementCommand}"
+                                        CommandParameter="{Binding .}" />
+                            </SwipeItemView>
+                        </SwipeItems>
+                    </SwipeView.RightItems>
+                    <SwipeView.TopItems>
+                        <SwipeItems Mode="Reveal" SwipeBehaviorOnInvoked="RemainOpen">
+                            <SwipeItemView>
+                                <Button Text="+"
+                                        WidthRequest="40"
+                                        BackgroundColor="LightGreen"
+                                        Command="{Binding Source={x:Reference ThisPage}, Path=IncrementCommand}"
+                                        CommandParameter="{Binding .}" />
+                            </SwipeItemView>
+                            <SwipeItemView>
+                                <Button Text="-" 
+                                        WidthRequest="40"
+                                        BackgroundColor="LightCoral"
+                                        Command="{Binding Source={x:Reference ThisPage}, Path=DecrementCommand}"
+                                        CommandParameter="{Binding .}" />
+                            </SwipeItemView>
+                        </SwipeItems>
+                    </SwipeView.TopItems>
+                    <SwipeView.BottomItems>
+                        <SwipeItems Mode="Reveal" SwipeBehaviorOnInvoked="RemainOpen">
+                            <SwipeItemView>
+                                <Button Text="+"
+                                        WidthRequest="40"
+                                        BackgroundColor="LightGreen"
+                                        Command="{Binding Source={x:Reference ThisPage}, Path=IncrementCommand}"
+                                        CommandParameter="{Binding .}" />
+                            </SwipeItemView>
+                            <SwipeItemView>
+                                <Button Text="-" 
+                                        WidthRequest="40"
+                                        BackgroundColor="LightCoral"
+                                        Command="{Binding Source={x:Reference ThisPage}, Path=DecrementCommand}"
+                                        CommandParameter="{Binding .}" />
+                            </SwipeItemView>
+                        </SwipeItems>
+                    </SwipeView.BottomItems>
 
-                    <Grid Padding="10" BackgroundColor="LightBlue"  >
-                        <Label Text="{Binding Value}" FontSize="18" HorizontalOptions="Center" />
+                    <Grid Padding="10" Margin="10" BackgroundColor="LightBlue" HeightRequest="120"  >
+                        <Label Text="{Binding Value}" FontSize="18" HorizontalOptions="Center" VerticalOptions="Center" />
                     </Grid>
                 </SwipeView>
             </DataTemplate>
